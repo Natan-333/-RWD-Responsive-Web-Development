@@ -107,7 +107,6 @@ document.write("</table>");
 //----------------------------------------------------------------
 
 document.write(`<h2>Exercício 02.D: Criar um Reduce para somar o valor total dos descontos<h2>`);
-
 document.write(`<h3> Total de Descontos:</h3>`)
 
 const totalDescontos = funcionarios.reduce((acumulador, funcionario) => {
@@ -117,3 +116,24 @@ const totalDescontos = funcionarios.reduce((acumulador, funcionario) => {
 console.log(totalDescontos);
 document.write(`O Total de descontos é de R$ ${totalDescontos}`)
 
+//----------------------------------------------------------------
+
+document.write(`<h2> Exercício 04: Crie uma função tradicional que conte os cliques na página e faça o mesmo
+usando Arrow function. Exemplifique e demonstre a saída (15 pontos)</h2>`)
+document.write(`<h3>Total de Cliques:</h3>`)
+document.write(`<button onclick="contarCliquesTr(); contarCliquesAf()">Clique aqui!</button>
+<div id="resultadoTr"></div><div id="resultadoAf"></div>`)
+
+let totalCliquesTr = 0;
+
+function contarCliquesTr() {
+  totalCliquesTr++;
+  document.getElementById("resultadoTr").innerHTML = `Função Tradicional: O total de cliques no botão foi de ${totalCliquesTr} vezes.`;
+}
+
+let totalCliquesAf = 0;
+
+const contarCliquesAf = () => {
+  totalCliquesAf++;
+  document.getElementById("resultadoAf").innerHTML = `Arrow Function: O total de cliques no botão foi de ${totalCliquesAf} vezes.`;
+}
