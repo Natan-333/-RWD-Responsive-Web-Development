@@ -166,3 +166,27 @@ const contarCliquesAf = () => {
 
 //----------------------------------------------------------------
 
+document.write(`<h2> Exercício 5: Criar um programa que calcule a média de 7 notas e exiba uma mensagem indicando se o aluno foi aprovado ou reprovado. Considere que a média mínima para aprovação é 6. Exemplifique e demonstre a saída! (15 pontos)</h2>`)
+
+const notas = [6, 8, 3, 7, 4, 7, 9]
+
+const media = (notas) => {
+  let soma = 0;
+  for (let i = 0; i<notas.length; i++){
+    soma += notas[i];
+  }
+  let resultado = soma / notas.length;
+  return resultado;
+}
+
+document.write(`Notas: ${notas}<br>`)
+document.write(`Média: ${media(notas).toFixed(2)}<br>`)
+
+if (media(notas) >= 6){
+  document.write(`Aluno aprovado!`)
+}else {
+  document.write(`Aluno reprovado!`)
+}
+
+
+//----------------------------------------------------------------
