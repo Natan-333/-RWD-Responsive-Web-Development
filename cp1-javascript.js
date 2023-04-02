@@ -190,3 +190,31 @@ if (media(notas) >= 6){
 
 
 //----------------------------------------------------------------
+
+
+document.write(`<h2>Exercício 6: Crie um programa que receba um nome de usuário e uma senha e verifique se eles correspondem aos dados de um usuário cadastrado. Considere que o usuário cadastrado possui nome de usuário "admin" e senha "1234". O programa deve exibir uma mensagem indicando se o login foi realizado com sucesso ou se houve falha de autenticação. Exemplifique e demonstre a saída! (10 pontos)</h2>`)
+
+const usuarioCadastrado = (`admin`);
+const senhaCadastrada = (`1234`);
+
+document.write(`<b>Digite aqui o seu login: </b><br>`);
+document.write(`<label for="usuario"><b>USUÁRIO: </b></label>
+<input type="text" id="usuario"><br>`);
+document.write(`<label for="senha"><b>SENHA: </b></label>
+<input type="password" id="senha"><br>`);
+document.write(`<button onclick="login()">LOGIN </button>`);
+document.write(`<div id="logado"></div>`);
+
+const login = () =>{
+  let usuario = document.getElementById("usuario").value;
+  let senha = document.getElementById("senha").value;
+
+  if(usuario == usuarioCadastrado && senha == senhaCadastrada){
+    document.getElementById("logado").innerHTML = "<h4>Login Realizado! </h4>"
+  }else{
+    document.getElementById("logado").innerHTML = "<h4>Login inválido.</h4>"
+  }
+}
+
+
+//----------------------------------------------------------------
