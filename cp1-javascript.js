@@ -2,7 +2,6 @@
 // BRUNA MENEGATTI VIENNA - RM 96848
 // KAUE CAPONERO FIGUEIREDO - RM 96466
 
-// 
 const texto = "Início do programa."
 document.write(`<h1> ${texto} </h1>`)
 
@@ -57,6 +56,8 @@ const funcionarios = [
     {nome: "Mariazinha", idade: 20, sexo: "F", cargo: "Recepcionista", salario: 2000, descontos: 200, data_admissao: "20/05/2014", data_demissao: new Date("2023-02-15")},
 ];
 
+//----------------------------------------------------------------
+
 document.write(`<h2>Exercício 02.A: Fazer o filter de funcionários que tiveram data de admissão entre 2000 à 2010:</h2>`)
 document.write(`<h3>Funcionários admitidos entre 2000 e 2010:</h3>`);
 
@@ -73,7 +74,6 @@ const funcionariosAdmitidos2000_2010 = funcionarios.filter(funcionario => {
   });
 
 //----------------------------------------------------------------
-// EXERCÍCIO 02.B: 
 
 document.write(`<h2>Exercício 02.B: Fazer um filter de funcionários que foram demitidos depois de 2018:</h2>`)
 document.write(`<h3>Funcionários demitidos após 2018:</h3>`);
@@ -92,7 +92,7 @@ const funcionariosDemitidosApos2018 = funcionarios.filter(funcionario => {
 
 //----------------------------------------------------------------
  
-document.write(`<h2>Exercício 02.C: Fazer um map de funcionários e trazer o nome, salário, desconto</h2>`)
+document.write(`<h2>Exercício 02.C: Fazer um map de funcionários e trazer o nome, salário, desconto:</h2>`)
 document.write("<h3>Lista de Funcionários:</h3>");
 document.write("<table>");
 document.write("<b><tr><th>NOME</th><th>SALÁRIO</th><th>DESCONTO</th></tr></b>");
@@ -106,7 +106,7 @@ document.write("</table>");
 
 //----------------------------------------------------------------
 
-document.write(`<h2>Exercício 02.D: Criar um Reduce para somar o valor total dos descontos<h2>`);
+document.write(`<h2>Exercício 02.D: Criar um Reduce para somar o valor total dos descontos:<h2>`);
 document.write(`<h3> Total de Descontos:</h3>`)
 
 const totalDescontos = funcionarios.reduce((acumulador, funcionario) => {
@@ -118,8 +118,7 @@ document.write(`O Total de descontos é de R$ ${totalDescontos}`)
 
 //----------------------------------------------------------------
 
-document.write(`<h2>Exercício 03: Crie uma função tradicional que some A e B e depois faça a divisão por C e apresente. Agora com o mesmo exemplo crie uma Arrow function para apresentar o mesmo resultado (15 pontos)</h2>`)
-
+document.write(`<h2>Exercício 03: Crie uma função tradicional que some A e B e depois faça a divisão por C e apresente. Agora com o mesmo exemplo crie uma Arrow function para apresentar o mesmo resultado (15 pontos):</h2>`)
 document.write(`<h3>Calculo solicitado sendo a=10, b=10 e c=5:</h3> `)
 
 function calculoTr(a, b, c) {
@@ -144,7 +143,7 @@ document.write(`<b>Arrow Function:</b> ${calculoAf(10, 10, 5)}`)
 //----------------------------------------------------------------
 
 document.write(`<h2> Exercício 04: Crie uma função tradicional que conte os cliques na página e faça o mesmo
-usando Arrow function. Exemplifique e demonstre a saída (15 pontos)</h2>`)
+usando Arrow function. Exemplifique e demonstre a saída (15 pontos):</h2>`)
 document.write(`<h3>Total de Cliques:</h3>`)
 document.write(`<button onclick="contarCliquesTr(); contarCliquesAf()">Clique aqui!</button>
 <div id="resultadoTr"></div><div id="resultadoAf"></div>`)
@@ -163,10 +162,9 @@ const contarCliquesAf = () => {
   document.getElementById("resultadoAf").innerHTML = `Arrow Function: O total de cliques no botão foi de ${totalCliquesAf} vezes.`;
 }
 
-
 //----------------------------------------------------------------
 
-document.write(`<h2> Exercício 5: Criar um programa que calcule a média de 7 notas e exiba uma mensagem indicando se o aluno foi aprovado ou reprovado. Considere que a média mínima para aprovação é 6. Exemplifique e demonstre a saída! (15 pontos)</h2>`)
+document.write(`<h2> Exercício 5: Criar um programa que calcule a média de 7 notas e exiba uma mensagem indicando se o aluno foi aprovado ou reprovado. Considere que a média mínima para aprovação é 6. Exemplifique e demonstre a saída! (15 pontos):</h2>`)
 
 const notas = [6, 8, 3, 7, 4, 7, 9]
 
@@ -188,11 +186,9 @@ if (media(notas) >= 6){
   document.write(`Aluno reprovado!`)
 }
 
-
 //----------------------------------------------------------------
 
-
-document.write(`<h2>Exercício 6: Crie um programa que receba um nome de usuário e uma senha e verifique se eles correspondem aos dados de um usuário cadastrado. Considere que o usuário cadastrado possui nome de usuário "admin" e senha "1234". O programa deve exibir uma mensagem indicando se o login foi realizado com sucesso ou se houve falha de autenticação. Exemplifique e demonstre a saída! (10 pontos)</h2>`)
+document.write(`<h2>Exercício 6: Crie um programa que receba um nome de usuário e uma senha e verifique se eles correspondem aos dados de um usuário cadastrado. Considere que o usuário cadastrado possui nome de usuário "admin" e senha "1234". O programa deve exibir uma mensagem indicando se o login foi realizado com sucesso ou se houve falha de autenticação. Exemplifique e demonstre a saída! (10 pontos):</h2>`)
 
 const usuarioCadastrado = (`admin`);
 const senhaCadastrada = (`1234`);
@@ -216,12 +212,10 @@ const login = () =>{
   }
 }
 
-
 //----------------------------------------------------------------
 
-
 document.write(`<h2>Exercício 7: Faça um programa que receba a idade de uma pessoa e exiba uma mensagem indicando em qual faixa etária ela se encontra: criança (até 12 anos), adolescente (entre 13 e 18 anos), adulto (entre 19 e 60 anos) ou idoso (mais de 60 anos).
-Exemplifique e demonstre a saída! (5 pontos)</h2>`)
+Exemplifique e demonstre a saída! (5 pontos):</h2>`)
 
 document.write(`<label for="idade"><b><h3>Digite aqui a sua idade: </h3></b></label>
 <input type="text" id="idade"><br>`);
@@ -242,10 +236,9 @@ const verificarIdade = () =>{
   }
 }
 
-
 //----------------------------------------------------------------
 
-document.write(`<h2>Exercício 8: Como usar o operador % em JavaScript? Exemplifique e demonstre a saída! (5 Pontos)</h2>`)
+document.write(`<h2>Exercício 8: Como usar o operador % em JavaScript? Exemplifique e demonstre a saída! (5 Pontos):</h2>`)
 
 document.write(`<b>Calcule se irá sobrar pedaços de bolo: </b><br>`);
 document.write(`<label for="bolo"><b>Pedaços de bolo (total): </b></label>
