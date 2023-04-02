@@ -4,6 +4,9 @@
 
 // EXERCÍCIO 01:
 
+const texto = "Início do programa."
+document.write(`<h1> ${texto} </h1> <br></br>`)
+
 const escola = [
     {curso: "Responsive Web Development", aluno: "Bruna Menegatti Vienna", professor: "Wellington", turma: "1TDSPR", periodo: "Noite"},
     {curso: "AI & Chatbot", aluno: "Kaue Caponero Figueiredo", professor: "Daniel", turma: "1TDSPR", periodo: "Noite"},
@@ -24,5 +27,13 @@ const alunoEstudando = escola.map( escola =>
     console.log(alunoEstudando);
     document.write(alunoEstudando + `<br></br>`);
 
+const alunoBuscado = escola.find(item => item.aluno === "Bruna Menegatti Vienna");
+    console.log(alunoBuscado);
+    
+    if (alunoBuscado) {
+      document.write(`<p>O aluno <b>${alunoBuscado.aluno}</b> está estudando o curso <b>${alunoBuscado.curso}</b> na turma <b>${alunoBuscado.turma}</b>.</p>`);
+    } else {
+      document.write("Aluno não encontrado.");
+    }
 
 
