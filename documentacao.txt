@@ -13,4 +13,5 @@ Link do Google docs:   https://docs.google.com/document/d/1TuE3P2NPbKDIBTMPzEnhT
 4- ok
 5- ok
 6- ok
-7- em andamento...
+7- ok
+8- em andamento...

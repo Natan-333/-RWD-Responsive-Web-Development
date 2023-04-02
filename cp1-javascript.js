@@ -218,3 +218,30 @@ const login = () =>{
 
 
 //----------------------------------------------------------------
+
+
+document.write(`<h2>Exercício 7: Faça um programa que receba a idade de uma pessoa e exiba uma mensagem indicando em qual faixa etária ela se encontra: criança (até 12 anos), adolescente (entre 13 e 18 anos), adulto (entre 19 e 60 anos) ou idoso (mais de 60 anos).
+Exemplifique e demonstre a saída! (5 pontos)</h2>`)
+
+document.write(`<label for="idade"><b><h3>Digite aqui a sua idade: </h3></b></label>
+<input type="text" id="idade"><br>`);
+document.write(`<button onclick="verificarIdade()">VERIFICAR </button>`);
+document.write(`<div id="verificado"></div>`);
+
+const verificarIdade = () =>{
+  let idade = parseInt(document.getElementById("idade").value);
+
+  if(idade <= 12){
+    document.getElementById("verificado").innerHTML = "<h4>Criança</h4>"
+  }else if(idade>= 13 && idade<= 18){
+    document.getElementById("verificado").innerHTML = "<h4>Adolescente</h4>"
+  }else if (idade>=19 &&  idade<= 60){
+    document.getElementById("verificado").innerHTML = "<h4>Adulto</h4>"
+  }else{
+    document.getElementById("verificado").innerHTML = "<h4>Idoso</h4>"
+  }
+}
+
+
+//----------------------------------------------------------------
+
