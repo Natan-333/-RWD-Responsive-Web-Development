@@ -118,6 +118,31 @@ document.write(`O Total de descontos é de R$ ${totalDescontos}`)
 
 //----------------------------------------------------------------
 
+document.write(`<h2>Exercício 03: Crie uma função tradicional que some A e B e depois faça a divisão por C e apresente. Agora com o mesmo exemplo crie uma Arrow function para apresentar o mesmo resultado (15 pontos)</h2>`)
+
+document.write(`<h3>Calculo solicitado sendo a=10, b=10 e c=5:</h3> `)
+
+function calculoTr(a, b, c) {
+  let soma = a + b;
+  let divisao = soma / c;
+  return divisao;
+ } 
+
+
+const calculoAf = (a, b, c) => {
+  let soma = a + b;
+  let divisao = soma / c;
+  return divisao;
+}
+
+console.log(calculoTr(10,10,5))
+document.write(`<b>Função Tradicional:</b> ${calculoTr(10, 10, 5)}<br>`)
+
+console.log(calculoAf(10,10,5))
+document.write(`<b>Arrow Function:</b> ${calculoAf(10, 10, 5)}`)
+
+//----------------------------------------------------------------
+
 document.write(`<h2> Exercício 04: Crie uma função tradicional que conte os cliques na página e faça o mesmo
 usando Arrow function. Exemplifique e demonstre a saída (15 pontos)</h2>`)
 document.write(`<h3>Total de Cliques:</h3>`)
@@ -137,3 +162,7 @@ const contarCliquesAf = () => {
   totalCliquesAf++;
   document.getElementById("resultadoAf").innerHTML = `Arrow Function: O total de cliques no botão foi de ${totalCliquesAf} vezes.`;
 }
+
+
+//----------------------------------------------------------------
+
