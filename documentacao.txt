@@ -2,6 +2,8 @@ Professor, nós não temos o pacote office (word), por isso estamos fazendo pelo
 
 Link do Google docs:   https://docs.google.com/document/d/1TuE3P2NPbKDIBTMPzEnhT0YFjHY8acZGGhQtz4aVf34/edit?usp=sharing
 
+O arquivo final foi exportado para o Word e está salvo na pasta também, porém, sem commits pois não conseguimos abri-lo.
+
 
 1- A) ok
 1- B) ok
@@ -14,4 +16,4 @@ Link do Google docs:   https://docs.google.com/document/d/1TuE3P2NPbKDIBTMPzEnhT
 5- ok
 6- ok
 7- ok
-8- em andamento...
+8- ok

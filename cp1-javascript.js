@@ -245,3 +245,23 @@ const verificarIdade = () =>{
 
 //----------------------------------------------------------------
 
+document.write(`<h2>Exercício 8: Como usar o operador % em JavaScript? Exemplifique e demonstre a saída! (5 Pontos)</h2>`)
+
+document.write(`<b>Calcule se irá sobrar pedaços de bolo: </b><br>`);
+document.write(`<label for="bolo"><b>Pedaços de bolo (total): </b></label>
+<input type="text" id="bolo"><br>`);
+document.write(`<label for="pessoas"><b>Quantidade por pessoa: </b></label>
+<input type="text" id="pessoas"><br>`);
+document.write(`<button onclick="calcularResto()">CALCULAR </button>`);
+document.write(`<div id="resto"></div>`);
+
+const calcularResto = () =>{
+  let bolo = parseInt(document.getElementById("bolo").value);
+  let pessoas = parseInt(document.getElementById("pessoas").value);
+
+  let boloPorPessoa = Math.floor(bolo/pessoas);
+  let restoBolo = bolo % pessoas;
+  const retorno = `<h4>Cada pessoa poderá comer ${boloPorPessoa} pedaços de bolo e sobrarão ${restoBolo} pedaços.</h4>`;
+
+  document.getElementById("resto").innerHTML = retorno;
+}
